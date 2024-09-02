@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Listar Produtos
+  body
+    h1 Produtos Cadastrados
+    if produtos && produtos.length > 0
+      table
+        thead
+          tr
+            th Nome
+            th Preço
+        tbody
+          each produto in produtos
+            tr
+              td= produto.nome
+              td= parseFloat(produto.preco).toFixed(2)
+    else
+      p Não há produtos cadastrados.
+    a(href='/produtos/novo') Cadastrar Novo Produto

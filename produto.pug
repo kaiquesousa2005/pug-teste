@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Cadastrar Produto
+  body
+    h1 Cadastrar Produto
+    form(action="/produtos" method="POST")
+      div
+        label(for="nome") Nome:
+        input(type="text" id="nome" name="nome" required)
+      div
+        label(for="preco") Preço:
+        input(type="number" id="preco" name="preco" step="0.01" required)
+      div
+        button(type="submit") Cadastrar
